@@ -6,7 +6,7 @@ export default function HomePage() {
 
   return (    
       <Typography>
-        Welcome to Toolpad Core!
+        Bienvido a Parfinanciero!
       </Typography>
   );
 }

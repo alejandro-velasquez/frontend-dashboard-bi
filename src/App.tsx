@@ -4,7 +4,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Outlet } from 'react-router';
 import { ReactRouterAppProvider } from '@toolpad/core/react-router';
 import type { Navigation } from '@toolpad/core/AppProvider';
-import { AdminPanelSettings, GolfCourseSharp, GraphicEq, MoneyOff } from '@mui/icons-material';
+import { AdminPanelSettings, ExitToApp, GolfCourseSharp, GraphicEq, MoneyOff } from '@mui/icons-material';
 
 const NAVIGATION: Navigation = [
   {
@@ -12,7 +12,7 @@ const NAVIGATION: Navigation = [
     title: 'Main items',
   },
   {
-    title: 'Dashboard',
+    title: 'Inicio',
     icon: <DashboardIcon />,
   },
   {
@@ -34,11 +34,16 @@ const NAVIGATION: Navigation = [
     segment: 'panel-admin',
     title: 'Panel Administrador',
     icon: <AdminPanelSettings />,
-  }
+  },
+  {
+    segment: 'salir',
+    title: 'Salir',
+    icon: <ExitToApp />,
+  },
 ];
 
 const BRANDING = {
-  title: "Bussines Intelligence",
+  title: "Business Intelligence",
 };
 
 

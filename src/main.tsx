@@ -8,6 +8,7 @@ import OrdersPage from './pages/orders';
 import { Expense } from './pages/expense';
 import { Predictions } from './pages/prediction';
 import { Admin } from './pages/admin';
+import { Goal } from './pages/goal';
 
 
 const router = createBrowserRouter([
@@ -27,12 +28,20 @@ const router = createBrowserRouter([
             element: <Predictions />,
           },
           {
+            path: 'metas-sugerencias',
+            element: <Goal />,
+          },
+          {
             path: 'gastos-ingresos',
             element: <Expense />,
           },
           {
             path: 'panel-admin',
             element: <Admin />,
+          },
+          {
+            path: 'salir',
+            element: "",
           }
         ],
       },
