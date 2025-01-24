@@ -5,6 +5,9 @@ import App from './App';
 import Layout from './layouts/dashboard';
 import DashboardPage from './pages';
 import OrdersPage from './pages/orders';
+import { Expense } from './pages/expense';
+import { Predictions } from './pages/prediction';
+import { Admin } from './pages/admin';
 
 
 const router = createBrowserRouter([
@@ -20,9 +23,17 @@ const router = createBrowserRouter([
             Component: DashboardPage,
           },
           {
-            path: 'orders',
-            Component: OrdersPage,
+            path: 'predicciones',
+            element: <Predictions />,
           },
+          {
+            path: 'gastos-ingresos',
+            element: <Expense />,
+          },
+          {
+            path: 'panel-admin',
+            element: <Admin />,
+          }
         ],
       },
     ],
