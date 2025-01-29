@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { CircularProgress, Typography } from "@mui/material";
+import { CircularProgress, Grid, Typography, Box } from "@mui/material";
 import { getIncome } from "../api/metricsApi";
 import { BalanceSheet } from "../types/MetricsTypes";
 import BalanceCard from "../components/BalanceCard";
+import { IncomeVsExpenseChart } from "../components/IncomeVsExpense";
 
 export default function HomePage() {
-   const [balance, setBalance] = useState<BalanceSheet | null>(null);
+  const [balance, setBalance] = useState<BalanceSheet | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -43,8 +44,19 @@ export default function HomePage() {
   }
 
   return (
-    <div className="centered-container">
-      <BalanceCard balance={balance} />
-    </div>
+    <Box sx={{ padding: "20px" }}>
+      {/* Grid para estructurar los componentes */}
+      <Grid container spacing={3} justifyContent="center">
+        {/* Balance Card */}
+        <Grid item xs={12} sm={6} md={4}>
+          <BalanceCard balance={balance} />
+        </Grid>
+
+        {/* Gráfico de Ingresos vs Gastos */}
+        <Grid item xs={12} sm={6} md={8}>
+          <IncomeVsExpenseChart userId={2} month="07" />
+        </Grid>
+      </Grid>
+    </Box>
   );
 }
