@@ -4,8 +4,9 @@ import { getIncome } from "../api/metricsApi";
 import { BalanceSheet } from "../types/MetricsTypes";
 import BalanceCard from "../components/BalanceCard";
 
+
 export default function HomePage() {
-   const [balance, setBalance] = useState<BalanceSheet | null>(null);
+  const [balance, setBalance] = useState<BalanceSheet | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 

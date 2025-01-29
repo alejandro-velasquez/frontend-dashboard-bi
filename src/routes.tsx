@@ -2,17 +2,17 @@ import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import App from './App';
 import { Predictions } from './pages/prediction';
-import { Expense } from './pages/expense';
-import { Home } from './pages/home';
+import { Expense } from './pages/expensePage';
 import { Goal } from './pages/goal';
 import { Admin } from './pages/admin';
+import HomePage from './pages';
 
 const router = createBrowserRouter( [
   {
     path: '/',
     element: <App />,
     children: [
-        { path: '', element: <Home /> },
+        { path: '', element: <HomePage /> },
         { path: 'predicciones', element: <Predictions /> },
         { path: 'metas-sugerencias', element: <Goal /> },
         { path: 'gastos-ingresos', element: <Expense /> },
