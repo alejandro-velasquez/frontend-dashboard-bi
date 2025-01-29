@@ -3,9 +3,9 @@ import { createBrowserRouter } from 'react-router-dom';
 import App from './App';
 import { Predictions } from './pages/prediction';
 import { Expense } from './pages/expensePage';
-import HomePage from './pages/homePage';
 import { Goal } from './pages/goal';
 import { Admin } from './pages/admin';
+import HomePage from './pages';
 
 const router = createBrowserRouter( [
   {
